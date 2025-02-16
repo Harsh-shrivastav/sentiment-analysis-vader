@@ -60,6 +60,7 @@ Simply open `index.html` in a browser.
 **Endpoint:** `POST /analyze_csv`  
 **Request:** Upload a CSV file with a `comment` column.
 **Response:** JSON containing sentiment results for all comments.
+**download sample csv file for testing**
 
 
 
