@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentiment Analysis Tool</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>🔍 Sentiment Analysis Tool</h1>
+
+  <input type="text" id="userInput" placeholder="Enter text to analyze..." />
+  <button id="analyzeBtn">Analyze Text</button>
+
+  <h3>Or Upload CSV File</h3>
+  <input type="file" id="csvFile" accept=".csv" />
+  <button id="uploadBtn">Upload & Analyze CSV</button>
+
+  <div class="summary-container">
+    <div class="summary-item">
+      <h4>Total Comments</h4>
+      <p id="totalComments">0</p>
+    </div>
+    <div class="summary-item">
+      <h4>Average Score</h4>
+      <p id="averageScore">0</p>
+    </div>
+    <div class="summary-item">
+      <h4>Spam Comments</h4>
+      <p id="spamCount">0</p>
+    </div>
+  </div>
+
+  <h3>📊 Keyword Trends</h3>
+  <ul id="keywordTrends"></ul>
+
+  <h3>Feedback</h3>
+  <p id="feedback">No feedback yet.</p>
+
+  <div class="export-buttons">
+    <button id="exportCSV">📥 Export CSV</button>
+    <button id="exportJSON">📥 Export JSON</button>
+  </div>
+
+  <h3>📊 Sentiment Distribution</h3>
+  <canvas id="sentimentChart"></canvas>
+
+  <h3>📈 Sentiment Trends Over Time</h3>
+  <canvas id="trendChart"></canvas>
+
+  <table id="csvResults" class="hidden">
+    <thead>
+      <tr>
+        <th>Comment</th>
+        <th>Sentiment</th>
+        <th>Score</th>
+        <th>Spam</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
